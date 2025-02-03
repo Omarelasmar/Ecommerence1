@@ -1,0 +1,1076 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head-one {
+    width: 86%;
+    margin: auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+
+.oFirst,
+.oSecond {
+    height: 20px;
+}
+
+
+.oFirst a,
+.oSecond a {
+    position: relative;
+    color: #292621;
+    padding: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.oFirst a::before,
+.oFirst a::after,
+.oSecond a::before,
+.oSecond a::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: red;
+    transition: height 1s ease;
+}
+
+.oFirst a::before,
+.oSecond a::before {
+    top: 0;
+    left: 0px;
+}
+
+.oFirst a::after,
+.oSecond a::after {
+    top: 0;
+    right: 0px;
+}
+
+.oFirst a:hover::before,
+.oFirst a:hover::after,
+.oSecond a:hover::before,
+.oSecond a:hover::after {
+    height: 100%;
+}
+
+.oSecond a i {
+    transition: all 1s ease;
+
+}
+
+.oSecond a:hover i {
+    color: red;
+    transform: rotateY(180deg);
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.head-two {
+    width: 86%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.tSecond a,
+.tThird a {
+    position: relative;
+    color: #292621;
+    padding: 7px 12px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.tSecond a::before,
+.tSecond a::after {
+    content: "";
+    position: absolute;
+    border-color: red;
+    border-style: solid;
+    visibility: hidden;
+    transition: transform 0.8s ease;
+}
+
+/* Horizontal Borders */
+.tSecond a::after {
+    border-width: 2px 0;
+    width: 96.7%;
+    height: 95%;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* Vertical Borders */
+.tSecond a::before {
+    border-width: 0 2px;
+    width: 94%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+/* Hover Animation */
+.tSecond a:hover::before,
+.tSecond a:hover::after {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.tThird a:hover,
+.tSecond a:hover {
+    color: red;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.head-three {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.tP span {
+    color: white;
+}
+
+.tp .gold {
+    color: goldenrod;
+    padding-bottom: 5px;
+    font-size: 18px;
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 3px;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.first {
+    width: 100%;
+    height: 80vh;
+
+}
+
+.first-img {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/pexels-bubi-2709563.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.first-data {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 100;
+}
+
+.first-data .beau {
+    text-align: center;
+    font-family: "Beau Rivage", serif;
+    font-size: 55px;
+    padding: 5px;
+    color: red;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+.first-data .racing {
+    font-family: "Racing Sans One", serif;
+    font-weight: 400;
+    font-size: 50px;
+    padding: 5px;
+    font-style: normal;
+}
+
+.first-data .normal {
+    text-align: center;
+    font-size: 18;
+    padding: 10px;
+}
+
+.first-data button {
+    margin-left: 150px;
+    margin-top: 10px;
+    border: none;
+    background: #16161a;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 25px;
+    transition: 0.5s;
+}
+
+.first-data button:hover {
+    font-size: 22px;
+    background-color: white;
+    color: #16161a;
+    transform: scale(1.05)
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.second {
+    margin-top: 50px;
+    width: 100%;
+    height: 450px;
+}
+
+.s-main {
+    margin: auto;
+    width: 86%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s-main div {
+    width: 400px;
+    height: 350px;
+}
+
+.s-images {
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.s-images img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.s-images:hover img {
+    transform: scale(1.1);
+}
+
+.s-details {
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    z-index: 100;
+    transition: top 0.5s ease;
+}
+
+.s-details h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.s-details a {
+    display: inline-block;
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+    color: goldenrod;
+    padding-bottom: 5px;
+    font-size: 20px;
+    border-bottom: 2px solid goldenrod;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    margin-left: 35px;
+    margin-top: 30px;
+
+}
+
+.s-images:hover .s-details {
+    top: 55%;
+
+}
+
+.s-images:hover .s-details a {
+    bottom: 0;
+    opacity: 1;
+
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Parent Section */
+.third {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Top Section */
+.third-top {
+    width: 86%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.t-right a.a-red {
+    color: red;
+    border-bottom: 4px solid red;
+    padding-bottom: 20px;
+}
+
+.t-right a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.t-left h2 {
+    font-size: 32px;
+}
+
+/* Product Cards Section */
+.third-bottom {
+    width: 86%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    perspective: 1000px;
+    /* Adds 3D depth for the rotation effect */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Image Container for Rotation */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 75%;
+    transition: transform 1s ease;
+}
+
+.main-image,
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.hover-image {
+    transform: rotateY(180deg);
+}
+
+/* Image Flip on Hover */
+.product-card:hover .image-container {
+    transform: rotateY(180deg);
+}
+
+.product-card:hover .hover-image {
+    transform: rotateY(0);
+}
+
+.product-card:hover .main-image {
+    transform: rotateY(180deg);
+}
+
+/* Text and Price */
+.product-card h3 {
+    padding: 10px;
+    font-size: 20px;
+    transition: color 0.5s ease;
+    z-index: 2;
+}
+
+.product-card span {
+    font-size: 18px;
+    z-index: 2;
+}
+
+.line-th {
+    padding: 10px;
+    text-decoration: line-through;
+}
+
+.product-card:hover h3 {
+    color: red;
+}
+
+/* Icons */
+.third-icons {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 250px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.third-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.third-icons a:hover {
+    transform: scale(1.2);
+    background-color: red;
+    color: white;
+}
+
+.product-card:hover .third-icons {
+    opacity: 1;
+}
+
+/* Arrows */
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 45%;
+    font-size: 30px;
+    color: black;
+}
+
+.left-arrow {
+    left: 5%;
+}
+
+.right-arrow {
+    left: 94%;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    color: gainsboro;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.customer {
+    width: 100%;
+    height: 400px;
+    background-color: #274A41;
+    margin-bottom: 50px;
+    position: relative;
+    box-shadow: 1px 3px 2px #00000070, -1px -3px 2px #00000070;
+}
+
+.cust-all {
+    width: 86%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center-align the text inside */
+}
+
+.cust-all h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: white
+}
+
+.cust-all p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 45px;
+    color: black;
+}
+
+.cust-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    /* Space between image and text */
+}
+
+.cust-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.ceo-customer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceo-customer h3 {
+    font-size: 22px;
+    margin-top: 50px;
+    color: white;
+}
+
+.ceo-customer p {
+    font-size: 16px;
+    color: black;
+    margin-top: 5px;
+}
+
+.cust-info img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.forth {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.f-top {
+    width: 86%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-top h2 {
+    font-family: "Montserrat", serif;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.f-bottom {
+    width: 86%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.acs-card {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.acs-image {
+    position: relative;
+    width: 100%;
+    height: 75%;
+    transition: transform 1s ease;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.acs-image img {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.acs-image::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    transform: translateY(-100%);
+    transition: transform 0.8s ease;
+    background-position: center;
+    opacity: 1;
+    /* Keep it visible, since we're animating its position */
+}
+
+.card-shoes .acs-image::after {
+    background-image: url(../images/shoes\ 2.jpg);
+}
+
+.card-watch .acs-image::after {
+    background-image: url(../images/watch\ 2\ .jpg);
+}
+
+.card-frag .acs-image::after {
+    background-image: url(../images/frag\ 2\ .jpg);
+}
+
+.card-bag .acs-image::after {
+    background-image: url(../images/bag\ 2\ .jpg);
+}
+
+.acs-card:hover .acs-image::after {
+    transform: translateY(0);
+    /* Slide it into view */
+}
+
+.forth-icons {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 250px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.forth-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.acs-card:hover .forth-icons {
+    opacity: 1;
+}
+
+.forth-icons a:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+.acs-card h3 {
+    padding: 10px;
+    font-size: 20px;
+    transition: color 0.5s ease;
+    z-index: 2;
+}
+
+.acs-card:hover h3 {
+    color: red;
+}
+
+.acs-card span {
+    font-size: 18px;
+    z-index: 2;
+}
+
+.line-th {
+    text-decoration: line-through;
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+.fifth {
+    width: 100%;
+    height: 100vh;
+    background-color: gainsboro;
+    box-shadow: 1px 3px 2px #00000070, -1px -3px 2px #00000070;
+}
+
+.fifth h2 {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 34px;
+    color: #16161a;
+    margin-bottom: 50px;
+}
+
+.fifth-content {
+    width: 86%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-content div {
+    width: 380;
+    height: 500;
+    text-align: center;
+
+}
+
+.fifth-content div img {
+    width: 100%;
+    height: 75%;
+    transition: all 1s ease;
+}
+
+.fifth-content div h3 {
+    font-size: 26px;
+    padding: 25px 0px;
+}
+
+.fifth-content div a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.fifth-content div:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.sixth {
+    width: 100%;
+    height: 250px;
+
+}
+
+.six-features {
+    width: 86%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.six-features .six-main {
+    width: 280px;
+    height: 200px;
+    position: relative;
+
+}
+
+.six-features div i {
+    font-size: 50px;
+    color: #1d254760;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.six-main h3 {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    font-size: 20px;
+}
+
+.icons .t-hover {
+    transform: translatey(30px);
+    visibility: hidden;
+    transition: all 0.07s ease;
+}
+
+.six-main:hover .t-hover {
+    color: #1d2547;
+    transform: translatey(0);
+    visibility: visible;
+}
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.last {
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+}
+
+.foot-container {
+    height: 100%;
+    width: 86%;
+    margin: auto;
+}
+
+.foot-one {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-one h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.foot-one p {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+}
+
+.foot-one input {
+    width: 400px;
+    height: 50px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.foot-one .sub {
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 20px;
+    transition: transform 0.5s ease;
+}
+
+/* Corrected hover effect on the subscribe button */
+.foot-one .sub:hover {
+    transform: scale(1.1);
+}
+
+/* Social media icons */
+.foot-icon i {
+    color: #677F8B;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 0.5s ease;
+}
+
+
+.foot-icon a:hover i {
+    transform: scale(1.2);
+    color: white;
+}
+
+
+.foot-container hr {
+    height: 1px;
+    background-color: #677F8B;
+    border: none;
+}
+
+.foot-two {
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.foot-two div {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.foot-two div h2 {
+    color: white;
+    margin-top: 10px;
+    padding-bottom: 40px;
+}
+
+.foot-two div a {
+    color: white;
+    text-decoration: none;
+    color: #BBB9B5;
+    font-size: 17px;
+    padding-bottom: 20px;
+    transition: transform 1s ease;
+}
+
+.foot-two div a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.foot-three {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-three p {
+    padding-top: 20px;
+    color: #BBB9B5;
+}
+
+.foot-three .color {
+    color: red;
+}
+
+.foot-three p span i {
+    color: red;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .head-one {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+    .head-one .oFirst, .head-one .oSecond {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .first-data {
+        top: 15%;
+        left: 10%;
+        text-align: left;
+    }
+
+    .first-data button {
+        margin: 0;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .s-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .s-main div {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .third-bottom, .f-bottom, .fifth-content, .six-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card, .acs-card, .fifth-content div {
+        width: 90%;
+        height: auto;
+    }
+
+    .six-main {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .head-two {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .third-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .third-bottom .product-card {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .forth-icons {
+        top: 200px;
+    }
+
+    .foot-one input {
+        width: 80%;
+    }
+
+    .foot-one button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .s-main div {
+        margin: 0 15px;
+    }
+
+    .third-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .six-main {
+        margin: 20px;
+    }
+}
